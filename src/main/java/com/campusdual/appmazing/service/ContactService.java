@@ -48,4 +48,32 @@ public class ContactService implements IContactService {
         contactDao.delete(contact);
         return contact.getId();
     }
+
+    @Override
+    public int updateSecureContact(ContactDto contactDto){
+        ContactDto contactBBDD = ContactMapper.INSTANCE.toDTO(contactDao.getReferenceById(contactDto.getId()));
+        if(contactBBDD != null){
+            if(contactDto.getName() != null){
+                contactBBDD.setName(contactDto.getName());
+            }
+            if (contactDto.getSurname() != null ){
+                contactBBDD.setSurname(contactDto.getSurname());
+            }
+
+            if (contactDto.getSurname2() != null){
+                contactBBDD.setSurname2(contactDto.getSurname2());
+            }
+
+            if(contactDto.getPhone() != null){
+                contactBBDD.setPhone(contactDto.getPhone());
+            }
+            if(contactDto.getEmail() != null){
+                contactBBDD.setEmail((contactDto.getEmail()));
+            }
+            return updateContact(contactBBDD);
+        }else{
+            return -1;
+        }
+
+    }
 }
