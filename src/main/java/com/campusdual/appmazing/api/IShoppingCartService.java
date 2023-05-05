@@ -1,6 +1,6 @@
 package com.campusdual.appmazing.api;
 
-import com.campusdual.appmazing.model.dto.ProductDto;
+
 import com.campusdual.appmazing.model.dto.ShoppingCartDto;
 
 import java.util.List;
@@ -16,4 +16,6 @@ public interface IShoppingCartService{
     int updateShoppingCart(ShoppingCartDto shoppingCartDto);
 
     int deleteShoppingCart(ShoppingCartDto shoppingCartDto);
+
+    int addToShoppingCart(ShoppingCartDto shoppingCartDto);
 }

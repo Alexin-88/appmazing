@@ -40,7 +40,6 @@ public class ProductController {
 
     @PostMapping(value = "/add")
     public int addProduct(@RequestBody ProductDto productDto){
-
         return productService.insertProduct(productDto);
     }
 

@@ -23,7 +23,7 @@ public class Product {
     private BigDecimal price;
 
     @Column
-    private boolean active;
+    private Boolean active;
 
     @Column
     private Date date_added;
@@ -61,11 +61,11 @@ public class Product {
         this.price = price;
     }
 
-    public boolean isActive() {
+    public Boolean isActive() {
         return active;
     }
 
-    public void setActive(boolean active) {
+    public void setActive(Boolean active) {
         this.active = active;
     }
 

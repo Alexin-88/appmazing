@@ -16,14 +16,11 @@ public class Contact {
     @Column
     private String surname;
 
-
     @Column
     private String surname2;
 
-
     @Column
     private String phone;
-
 
     @Column
     private String email;
